@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ee8dfaaf-4194-4772-8e0e-a289f29a39f1" name="crocuscitymall.ru" url="http://ssh.h304494794.nichost.ru">
+        <fileTransfer accessType="SFTP" host="ssh.h304494794.nichost.ru" port="22" sshConfigId="1bb3013c-f472-4b67-a48a-68ade68493f8" sshConfig="h304494794@ssh.h304494794.nichost.ru:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="055e6c39-8cfa-4e24-836d-dfbf77ba8f5b" name="yandex.gigas.su">
+        <fileTransfer accessType="SFTP" host="158.160.15.222" port="22" sshConfigId="b2556c7f-8b8b-4b34-8d6c-2a7b4980543d" sshConfig="bitrix@158.160.15.222:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="953d7afe-c9c1-4745-b91a-3499f4752541" name="gigas.su" url="http://92.53.121.139">
+        <fileTransfer host="92.53.121.139" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
