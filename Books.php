@@ -83,7 +83,7 @@ class ResponseHttp implements Observable
         $this->message = $message;
         $this->printMsg($responseCode, $message);
 
-        $producer = new Producer("httpAnswer", $this);
+        $producer = new Producer($_ENV['KAFKA_CREATE_TOPICS'], $this);
 
         $this->notifyObservers();
     }

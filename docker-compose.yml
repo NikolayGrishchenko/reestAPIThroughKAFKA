@@ -10,6 +10,8 @@ services:
       - /Users/nikolaygrishchenko/Downloads/localhost:/var/www/html
     networks:
       - company_network
+    env_file:
+      - .env
     depends_on:
       - mysql
 
@@ -46,7 +48,7 @@ services:
       - 9092:9092
     environment:
         KAFKA_ADVERTISED_HOST_NAME: kafka
-        KAFKA_CREATE_TOPICS: "test:1:1"
+        KAFKA_CREATE_TOPICS: ${KAFKA_CREATE_TOPICS}
         KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
     volumes:
       - /Users/nikolaygrishchenko/Downloads/localhost/docker.sock:/var/run/docker.sock
