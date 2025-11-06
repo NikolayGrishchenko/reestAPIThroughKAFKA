@@ -43,3 +43,4 @@ spl_autoload_register(function ($class) {
 use App\API\URL;
 $url = new URL();
 $url->proccessingUrl();
+print_r($_ENV['KAFKA_CREATE_TOPICS']);

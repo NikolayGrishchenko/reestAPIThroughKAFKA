@@ -42,10 +42,10 @@ class Consumer
         $this->consumer->subscribe([$_ENV['KAFKA_CREATE_TOPICS']]); // Subscribe to one or more topics
     }
 
-    public function __destruct()
-    {
-        // TODO: Implement __destruct() method.
-    }
+//    public function __destruct()
+//    {
+//        // TODO: Implement __destruct() method.
+//    }
 }
 
 $consumer = new Consumer();
