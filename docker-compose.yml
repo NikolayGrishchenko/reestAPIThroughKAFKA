@@ -7,7 +7,7 @@ services:
     ports:
       - 80:80
     volumes:
-      - /Users/nikolaygrishchenko/Downloads/localhost:/var/www/html
+      - .:/var/www/html
     networks:
       - company_network
     env_file:
@@ -26,7 +26,8 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - /Users/nikolaygrishchenko/Downloads/localhost:/var/mysql
+      - .:/var/mysql
+      - ./sql/books.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
       - company_network
 
@@ -51,7 +52,7 @@ services:
         KAFKA_CREATE_TOPICS: "${KAFKA_CREATE_TOPICS}"
         KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
     volumes:
-      - /Users/nikolaygrishchenko/Downloads/localhost/docker.sock:/var/run/docker.sock
+      - ./docker.sock:/var/run/docker.sock
     networks:
       - company_network
 
@@ -69,3 +70,6 @@ services:
 
 networks:
   company_network:
+
+volumes:
+  mysql_data:
