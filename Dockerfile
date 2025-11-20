@@ -8,3 +8,4 @@ RUN pecl install rdkafka && docker-php-ext-enable rdkafka
 RUN apt-get update && apt-get install -y git
 WORKDIR /var/www/html
 RUN git clone https://github.com/NikolayGrishchenko/reestAPIThroughKAFKA.git .
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
